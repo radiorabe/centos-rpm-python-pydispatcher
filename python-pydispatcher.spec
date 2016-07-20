@@ -14,6 +14,11 @@ License:        BSD
 URL:            https://pypi.python.org/pypi/PyDispatcher
 Source0:        https://pypi.python.org/packages/cd/37/39aca520918ce1935bea9c356bcbb7ed7e52ad4e31bff9b943dfc8e7115b/%{srcname}-%{version}.tar.gz
 
+BuildRequires: python
+%if %{with python3}
+BuildRequires: python34
+%endif
+
 BuildArch:      noarch
 
 %{!?py2_build: %global py2_build CFLAGS="$RPM_OPT_FLAGS" %{__python} setup.py build}
