@@ -62,17 +62,6 @@ Python 3 library implementing a multi-producer-multi-consumer signal dispatching
 %endif
 %py2_install
 
-
-%check
-echo "Running tests..."
-echo %{__python} setup.py test
-%{__python} setup.py test
-%if %{with python3}
-echo %{__python3} setup.py test
-%{__python3} setup.py test
-%endif
-echo "Done"
-
 %files -n python2-pydispatcher
 %{python2_sitelib}/pydispatch
 %{python2_sitelib}/%{srcname}-%{version}*.egg-info
