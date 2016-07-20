@@ -28,6 +28,7 @@ BuildArch:      noarch
 %package -n python2-pydispatcher
 Summary:        %{summary}
 %{?python_provide:%python_provide python2-pydispatcher}
+Provides: python-pydispatcher
 
 
 %description
