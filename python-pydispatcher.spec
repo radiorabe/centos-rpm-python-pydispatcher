@@ -65,8 +65,8 @@ Python 3 library implementing a multi-producer-multi-consumer signal dispatching
 
 %check
 echo "Running tests..."
-echo %{__python2} setup.py test
-%{__python2} setup.py test
+echo %{__python} setup.py test
+%{__python} setup.py test
 %if %{with python3}
 echo %{__python3} setup.py test
 %{__python3} setup.py test
