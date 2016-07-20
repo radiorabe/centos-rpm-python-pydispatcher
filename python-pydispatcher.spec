@@ -64,10 +64,14 @@ Python 3 library implementing a multi-producer-multi-consumer signal dispatching
 
 
 %check
+echo "Running tests..."
+echo %{__python2} setup.py test
 %{__python2} setup.py test
 %if %{with python3}
+echo %{__python3} setup.py test
 %{__python3} setup.py test
 %endif
+echo "Done"
 
 %files -n python2-pydispatcher
 %{python2_sitelib}/pydispatch
